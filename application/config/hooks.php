@@ -3,11 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
-| Hooks
+|  HOOKS
 | -------------------------------------------------------------------------
-| This file lets you define "hooks" to extend CI without hacking the core
-| files.  Please see the user guide for info:
-|
-|	https://codeigniter.com/user_guide/general/hooks.html
-|
 */
+
+if(ENVIRONMENT === ENV_PRODUCTION):
+    $hook['post_controller_constructor'][] = array(
+        'function' => 'force_ssl',
+        'filename' => 'ssl.php',
+        'filepath' => 'hooks'
+    );
+endif;
