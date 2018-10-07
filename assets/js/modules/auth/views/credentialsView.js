@@ -35,7 +35,7 @@ var Helper = Helper || {};
                         });
                     }
                 });
-            // console.log('JSON',ko.toJS(this.model().toJSON()));
+            console.log('JSON',ko.toJS(this.model().toJSON()));
         },
 
         onLogin: function (self) {
