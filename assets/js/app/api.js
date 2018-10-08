@@ -38,6 +38,8 @@ var API = API || {};
 
         },
         SERVICE: {
+            // get link lấy List Currency 
+            demoservice: 'service/ajax_get_currency'
 
         },
     };

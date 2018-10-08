@@ -5,10 +5,8 @@ var Helper = Helper || {};
 (function () {
     'use strict';
 
-    // const ENTER_KEY = 13;
-    // const ESC_KEY = 27;
 
-    app.CurrencyView = kb.ViewModel.extend({
+    app.demoView = kb.ViewModel.extend({
         /*
         |--------------------------------------------------------------------------
         | CONSTRUCTOR
@@ -27,3 +25,4 @@ var Helper = Helper || {};
        
     });
 })();
+

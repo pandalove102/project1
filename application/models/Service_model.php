@@ -27,7 +27,8 @@ class Service_model extends MY_Model {
      * @param object $params
      * @return $data
      */
-    public function get_currency ($params) {        
+    public function get_currency ($params) {   
+        console.log('tới rồi !! ');     
         return $this->get_api(API_PATH_SERVICE_SERVICE, '/currency/currency', $params);
     }
     /**

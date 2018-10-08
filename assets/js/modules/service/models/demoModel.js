@@ -4,7 +4,7 @@ var app = app || {};
 (function () {
     'use strict';
 
-    app.UserModel = Backbone.Model.extend({
+    app.demoModel = Backbone.Model.extend({
         /* --- Prevent backbone sync --- */
         sync: function () {
             return false;
@@ -19,7 +19,7 @@ var app = app || {};
         */
 
         initialize: function () {
-            console.log('This model has been initialized.');
+            console.log('load Model ok !!');
             // Thật ra trong initialize chẳng làm gì hay lắng nghe sự kiện gì thì cũng chẳng define cũng được :D
             // Chẳng qua đây demo mẫu cho biết :D
 
@@ -64,9 +64,14 @@ var app = app || {};
         |--------------------------------------------------------------------------
         */
         defaults: {
-            username: '',
-            age: 13,
-            type: '',
+            name: '',
+            alias:'',
+            code: '',
+            price: '',
+            date: '',
+            status: '',
+            length:''
+           
         },
 
         /*

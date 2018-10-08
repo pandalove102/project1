@@ -18,15 +18,16 @@ class Currencies extends Authenticated_Controller
         | SCRIPTS
         |--------------------------------------------------------------------------
         */
-        $this->add_script('vendor/chart.js/dist/Chart.min.js', TRUE);
-        $this->add_script('https://www.gstatic.com/charts/loader.js', TRUE);
-        $this->add_script('js/app/other/init_chart.js', TRUE);
-
-        $this->add_script('js/modules/dashboard/custom-ui/page_index.js');
-        $this->add_script('js/modules/dashboard/models/todoModel.js');
-        $this->add_script('js/modules/dashboard/collections/todoCollection.js');
-        $this->add_script('js/modules/dashboard/views/todoView.js');
-        $this->add_script('js/modules/dashboard/dashboardApp.js');
+        // $this->add_script('js/modules/dashboard/custom-ui/page_index.js');
+        // $this->add_script('js/modules/dashboard/models/todoModel.js');
+        // $this->add_script('js/modules/dashboard/collections/todoCollection.js');
+        // $this->add_script('js/modules/dashboard/views/todoView.js');
+        // $this->add_script('js/modules/dashboard/dashboardApp.js');
+        $this->add_script('js/modules/service/models/demoModel.js');
+        $this->add_script('js/modules/service/collections/demoCollection.js');
+        $this->add_script('js/modules/service/views/demoView.js');
+        // $this->add_script('js/modules/service/collections/demoCollection.js');
+        $this->add_script('js/modules/service/demoController.js');
 
         /*
         |--------------------------------------------------------------------------
