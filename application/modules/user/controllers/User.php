@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends MY_Controller
+class User extends Authenticated_Controller
 {
 
     public function __construct()
@@ -43,8 +43,8 @@ class User extends MY_Controller
     public function ajax_search_user() {
         //Setting parametter call action update from model PHP
         $param = [
-            'l' => $this->input->get('l'),
             'q' => $this->input->get('q'),
+            'l' => $this->input->get('l'),
             'a' => $this->input->get('a')
         ];
         $this->load->model('User_model');

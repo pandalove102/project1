@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Facilities extends MY_Controller
+class Facilities extends Authenticated_Controller
 {
 
 	protected $model_file = 'Hotel_model';

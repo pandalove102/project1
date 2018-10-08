@@ -8,7 +8,7 @@ var Helper = Helper || {};
     // const ENTER_KEY = 13;
     // const ESC_KEY = 27;
 
-    app.UserView = kb.ViewModel.extend({
+    app.CurrencyView = kb.ViewModel.extend({
         /*
         |--------------------------------------------------------------------------
         | CONSTRUCTOR
@@ -24,16 +24,6 @@ var Helper = Helper || {};
             // Thêm sự kiện cho view,ui
         },
 
-        // Computed
-        fullname: ko.pureComputed(function(){
-           return 'Firstname' + '_' + 'Lastname';
-        }),
-
-        // Search list data
-        doSearchUsers: function (formElement) {
-            AJAX.get(API.USER.SEARCH_USERS, {q: this.q, l: '',a: ''}).done(function(res){
-                console.log(res);
-			});
-        },
+       
     });
 })();

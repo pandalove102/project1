@@ -37,39 +37,12 @@ var app = app || {};
             // 2c. Xóa 1 object (destroy) => tương tác với 1 object => định nghĩa ở model
 
             // -- Bắt đầu định nghĩa collectionObservable từ Collection và View ban đầu --
-			self.users = kb.collectionObservable(new app.UserCollection(), app.UserView);
-            self.q = ko.observable('');
+			self.users = kb.collectionObservable(new app.CurrencyCollection(), app.CurrencyView);
+
 			// -- Get user từ API và nạp vào collection vừa nãy --
-			self.users.collection().fetch({ q:'', l:'', a:''});
+			self.users.collection().fetch({ q:'demo', l:'', a:''});
 
-            self.userView = new app.UserView(new app.UserModel());
-            console.log('userView',self.userView);
-            // console.log('Deptrai',deptraiModel);
-
-            /* ---======= GIỜ TẠO MỚI USER ========--- */
-
-            var deptraiModel = new app.UserModel({username: 'Tri Huynh'});
-            console.log('isNew', deptraiModel.isNew());
-
-            deptraiModel.set({ age:16, type: 'Em chưa 18 hehe'}); // Set thêm giá trị
-            console.log('Hmm, có tuổi vừa thay đổi', deptraiModel.hasChanged('age'))
-
-            // Méo ưa set nữa
-            deptraiModel.unset('age');
-            
-
-            
-
-            // Tạo thêm một người đẹp trai nữa coi
-            var deptrai6muiModel = deptraiModel.clone();
-            // deptrai6muiModel.save();
-            // deptrai6muiModel.destroy();
-
-
-            // Nhiều trò nữa, xem ở đây
-            // https://devhints.io/backbone
-            // http://backbonejs.org
+			
         },
     });
-
 })();

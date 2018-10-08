@@ -4,9 +4,9 @@ var app = app || {};
 (function () {
 	'use strict';
 
-	app.UserCollection = Backbone.Collection.extend({
-		model: app.UserModel,
-		localStorage: new Backbone.LocalStorage('UserCollection'),
+	app.CurrencyCollection = Backbone.Collection.extend({
+		model: app.CurrencyModel,
+		localStorage: new Backbone.LocalStorage('CurrencyCollection'),
 
         initialize: function () {
             console.log('This collection has been initialized.');
@@ -34,12 +34,13 @@ var app = app || {};
 		fetch : function(params) {
 		    var collection = this;
 		    // Gọi API
-            AJAX.get(API.USER.SEARCH_USERS, params).done(function(res){
+            AJAX.post(API.USER.SEARCH_USERS, params).done(function(res){
                 if(res.success){
                     var data = Helper.getData(res);
+
                     // Chúng ta đã có dữ liệu được trích xuất => nạp data đó vào collection thông qua hàm reset
                     collection.reset(data);
-                    console.log(collection);
+
                     // Ngoài hàm reset ra thì Backbone collection còn có nhiều hàm khác như add, destroy, sort..
                     // http://backbonejs.org/#Collection
 

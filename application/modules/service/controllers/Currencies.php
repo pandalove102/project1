@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Currencies extends MY_Controller
+class Currencies extends Authenticated_Controller
 {
 
 	protected $model_file = 'Hotel_model';

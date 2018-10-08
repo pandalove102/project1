@@ -64,15 +64,9 @@ var app = app || {};
         |--------------------------------------------------------------------------
         */
         defaults: {
-            "id" : "",
-            "first_name" : "",
-            "last_name" : "",
-            "full_name" : "",
-            "gender" : "",
-            "age" : "",
-            "email" : "",
-            "avatar" : "",
-            "q" : ""
+            username: '',
+            age: 13,
+            type: '',
         },
 
         /*

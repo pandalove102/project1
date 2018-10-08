@@ -12,7 +12,6 @@ var AJAX = AJAX || {};
 
 $(function () {
     'use strict';
-
     /* --- AJAX SETUP --- */
     $.ajaxSetup({
         // contentType: 'application/json; charset=UTF-8',
@@ -27,14 +26,19 @@ $(function () {
             }
         }
     });
+});
 
+/* --- AJAX HELPER --- */
+
+(function () {
+    'use strict';
     window.AJAX = (function () {
         /**
          * Check url is absolute
          * @param url
          * @returns {boolean}
          */
-        function isAbsoluteUrl(url){
+        function isAbsoluteUrl(url) {
             return /^(f|ht)tps?:\/\//i.test(url);
         }
 
@@ -76,9 +80,9 @@ $(function () {
             get: function (url, params) {
                 return call_api('GET', url, params);
             },
-            upload: function (url, params){
+            upload: function (url, params) {
                 return upload_api('GET', url, params);
             }
         };
     })();
-});
+})();
