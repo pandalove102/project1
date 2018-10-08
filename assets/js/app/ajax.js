@@ -45,7 +45,7 @@ $(function () {
          * @param params
          * @returns {*|{readyState, getResponseHeader, getAllResponseHeaders, setRequestHeader, overrideMimeType, statusCode, abort}}
          */
-        function callAPI(method, url, params) {
+        function call_api(method, url, params) {
             return $.ajax({
                 method: method,
                 url: isAbsoluteUrl(url) ? url : (HALO_CONSTANT.BASE_URL + url),
@@ -60,7 +60,7 @@ $(function () {
          * @param params
          * @returns {*|{readyState, getResponseHeader, getAllResponseHeaders, setRequestHeader, overrideMimeType, statusCode, abort}}
          */
-        function uploadAPI(method, url, params) {
+        function upload_api(method, url, params) {
             return $.ajax({
                 method: 'POST',
                 contentType: 'multipart/form-data; charset=UTF-8',
@@ -71,13 +71,13 @@ $(function () {
 
         return {
             post: function (url, params) {
-                return callAPI('POST', url, params);
+                return call_api('POST', url, params);
             },
             get: function (url, params) {
-                return callAPI('GET', url, params);
+                return call_api('GET', url, params);
             },
             upload: function (url, params){
-                return uploadAPI('GET', url, params);
+                return upload_api('GET', url, params);
             }
         };
     })();

@@ -1,4 +1,4 @@
-<div class="row no-gutters h-100"  kb-inject="loginController">
+<div class="row no-gutters h-100"  kb-inject="LoginController">
     <div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
         <div class="card">
             <div class="card-body" data-bind="with: credentials">
